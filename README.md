@@ -7,4 +7,4 @@ The official project of ACM MM 2022 paper "Less is More: Consistent Video Depth 
 
 ### [Arxiv](https://arxiv.org/abs/2208.00380) | [Paper](https://github.com/RaymondWang987/FMNet/blob/main/pdf/paper.pdf) | [Supp](https://github.com/RaymondWang987/FMNet/blob/main/pdf/supp.pdf) 
 
-![image][https://github.com/RaymondWang987/FMNet/blob/main/pdf/MMpipeline_large.pdf]
+![cr_fig1_v1 0](https://github.com/RaymondWang987/FMNet/blob/main/pdf/MMpipeline_large.pdf)
