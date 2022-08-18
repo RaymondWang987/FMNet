@@ -6,3 +6,5 @@ Yiran Wang<sup>1</sup>, Zhiyu Pan<sup>1</sup>, Xingyi Li<sup>1</sup>, Zhiguo Cao
 The official project of ACM MM 2022 paper "Less is More: Consistent Video Depth Estimation with Masked Frames Modeling". The code and data will be available soon.
 
 ### [Arxiv](https://arxiv.org/abs/2208.00380) | [Paper](https://github.com/RaymondWang987/FMNet/blob/main/pdf/paper.pdf) | [Supp](https://github.com/RaymondWang987/FMNet/blob/main/pdf/supp.pdf) 
+
+![image][https://github.com/RaymondWang987/FMNet/blob/main/pdf/MMpipeline_large.pdf]
