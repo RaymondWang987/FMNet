@@ -1,7 +1,13 @@
 # Less is More: Consistent Video Depth Estimation with Masked Frames Modeling (ACM MM 2022)
-Yiran Wang<sup>1</sup>, Zhiyu Pan<sup>1</sup>, Xingyi Li<sup>1</sup>, Zhiguo Cao<sup>1</sup>, Ke Xian<sup>1,*</sup>, Jianming Zhang<sup>2</sup>
 
-<sup>1</sup>School of Artificial Intelligence and Automation, Huazhong University of Science and Technology, <sup>2</sup>Adobe Research
+[Yiran Wang](https://scholar.google.com.hk/citations?hl=zh-CN&user=p_RnaI8AAAAJ)<sup>1</sup>,
+[Zhiyu Pan](https://orcid.org/0000-0001-5584-6669)<sup>1</sup>,
+[Xingyi Li](https://scholar.google.com/citations?user=XDKQsvUAAAAJ&hl=zh-CN)<sup>1</sup>,
+[Zhiguo Cao](http://english.aia.hust.edu.cn/info/1085/1528.htm)<sup>1</sup>,
+[Ke Xian](https://sites.google.com/site/kexian1991/)<sup>1*</sup>,
+[Jianming Zhang](https://jimmie33.github.io/)<sup>2</sup>
+
+<sup>1</sup>Huazhong University of Science and Technology, <sup>2</sup>Adobe Research
 
 The official project of ACM MM 2022 paper "Less is More: Consistent Video Depth Estimation with Masked Frames Modeling". The code and data will be available soon.
 
