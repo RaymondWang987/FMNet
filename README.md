@@ -17,3 +17,17 @@ The official project of ACM MM 2022 paper "Less is More: Consistent Video Depth 
 Temporal consistency is the key challenge of video depth estimation. Previous works are based on additional optical flow or camera poses, which is time-consuming. By contrast, we derive consistency with less information. Since videos inherently exist with heavy temporal redundancy, a missing frame could be recovered from neighboring ones. Inspired by this, we propose the frame masking network (FMNet), a spatial-temporal transformer network predicting the depth of masked frames based on their neighboring frames. By reconstructing masked temporal features, the FMNet can learn intrinsic inter-frame correlations, which leads to consistency. Compared with prior arts, experimental results demonstrate that our approach achieves comparable spatial accuracy and higher temporal consistency without any additional information. Our work provides a new perspective on consistent video depth estimation.
 
 ![image](https://github.com/RaymondWang987/FMNet/blob/main/pdf/pipeline.PNG)
+
+## Citation
+If you find our work useful in your research, please consider to cite our paper.
+
+```
+@inproceedings{Wang2022fmnet,
+  title = {Less is More: Consistent Video Depth Estimation with Masked Frames Modeling},
+  author = {Yiran, Wang and Zhiyu, Pan and Xingyi, Li and Zhiguo, Cao and Ke, Xian and Jianming, Zhang},
+  booktitle = {Proceedings of the 30th ACM International Conference on Multimedia (MM '22)},
+  year = {2022}
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+}
+```
