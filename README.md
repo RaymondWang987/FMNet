@@ -28,7 +28,9 @@ pip install numpy imageio opencv-python scipy tensorboard timm scikit-image tqdm
 ```
 
 # demo
-[Donwload]() our checkpoint on NYUDV2 dataset and put it in the checkpoint folder. The visualization results will be saved in ./demo/results folder.
+[Donwload]() our checkpoint on the NYUDV2 dataset and put it in the checkpoint folder. 
+
+The RGB frames are placed in ./demo/rgb. The visualization results will be saved in ./demo/results folder.
 ```
 python demo.py
 ```
