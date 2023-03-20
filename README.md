@@ -39,6 +39,14 @@ The RGB frames are placed in `./demo/rgb`. The visualization results will be sav
 python demo.py
 ```
 
+# Evaluation
+[Donwload]() the 654 testing sequences of the NYUDV2 dataset and put it in the `./data/testnyu_data/` folder.
+
+We will upload and update the link of data in this week.
+```
+python testfmnet_nyu.py
+```
+
 
 # Citation
 If you find our work useful in your research, please consider to cite our paper.
