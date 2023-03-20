@@ -19,7 +19,9 @@ Temporal consistency is the key challenge of video depth estimation. Previous wo
 ![image](https://github.com/RaymondWang987/FMNet/blob/main/pdf/pipeline.PNG)
 
 # Installation
-Our code is based on python=3.6.13 and pytorch==1.7.1. You can refer to the environment.yml or requirements.txt for installation. Some libraries in those files are not needed for the code.
+Our code is based on `python=3.6.13` and `pytorch==1.7.1`. 
+
+You can refer to the environment.yml or requirements.txt for installation. Some libraries in those files are not needed for the code.
 ```
 conda create -n fmnet python=3.6
 conda activate fmnet
@@ -27,10 +29,10 @@ conda install pytorch==1.7.1 torchvision==0.8.2 cudatoolkit=11.0 -c pytorch -c c
 pip install numpy imageio opencv-python scipy tensorboard timm scikit-image tqdm glob h5py
 ```
 
-# demo
-[Donwload]() our checkpoint on the NYUDV2 dataset and put it in the checkpoint folder. 
+# Demo
+[Donwload]() our checkpoint on the NYUDV2 dataset and put it in the `checkpoint` folder. 
 
-The RGB frames are placed in ./demo/rgb. The visualization results will be saved in ./demo/results folder.
+The RGB frames are placed in `./demo/rgb`. The visualization results will be saved in `./demo/results` folder.
 ```
 python demo.py
 ```
