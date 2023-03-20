@@ -9,7 +9,9 @@
 
 <sup>1</sup>Huazhong University of Science and Technology, <sup>2</sup>Adobe Research
 
-The official project of ACM MM 2022 paper "Less is More: Consistent Video Depth Estimation with Masked Frames Modeling". The code and data will be available soon.
+The official project of ACM MM 2022 paper 
+
+"Less is More: Consistent Video Depth Estimation with Masked Frames Modeling".
 
 ### [Arxiv](https://arxiv.org/abs/2208.00380) | [Paper](https://github.com/RaymondWang987/FMNet/blob/main/pdf/paper.pdf) | [Supp](https://github.com/RaymondWang987/FMNet/blob/main/pdf/supp.pdf) | [Poster](https://github.com/RaymondWang987/FMNet/blob/main/pdf/MM22poster.pdf) | [Video](https://youtu.be/wvukM7WD9wE) | [视频](https://www.bilibili.com/video/BV1BD4y1z79m?spm_id_from=444.41.list.card_archive.click&vd_source=806e94b96ef6755e55a2da337c69df47)
 
