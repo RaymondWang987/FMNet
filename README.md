@@ -21,7 +21,9 @@ Temporal consistency is the key challenge of video depth estimation. Previous wo
 # Installation
 Our code is based on `python=3.6.13` and `pytorch==1.7.1`. 
 
-You can refer to the environment.yml or requirements.txt for installation. Some libraries in those files are not needed for the code.
+You can refer to the environment.yml or requirements.txt for installation. 
+
+Some libraries in those files are not needed for the code.
 ```
 conda create -n fmnet python=3.6
 conda activate fmnet
