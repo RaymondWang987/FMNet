@@ -42,9 +42,10 @@ python demo.py
 ```
 
 # Evaluation
-[Donwload]() the 654 testing sequences of the NYUDV2 dataset and put it in the `./data/testnyu_data/` folder.
+[Donwload](https://drive.google.com/file/d/1Kg-NOZBfecGHgGyn9pMm7rNibfcg5dMp/view?usp=sharing) the 654 testing sequences of the NYUDV2 dataset and put it in the `./data/testnyu_data/` folder.
 
-We will upload and update the link of data in this week.
+Each sequence contains 12 consecutive RGB frames and the ground truth of the 654 testing images for evaluations.
+
 ```
 python testfmnet_nyu.py
 ```
