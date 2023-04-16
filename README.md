@@ -34,7 +34,7 @@ pip install numpy imageio opencv-python scipy tensorboard timm scikit-image tqdm
 ```
 
 # Demo
-[Donwload](https://drive.google.com/file/d/1D2EkCEcqlImpQ15qADlfFPpdCxV_8CLt/view?usp=sharing) our checkpoint on the NYUDV2 dataset and put it in the `checkpoint` folder. 
+[Download](https://drive.google.com/file/d/1D2EkCEcqlImpQ15qADlfFPpdCxV_8CLt/view?usp=sharing) our checkpoint on the NYUDV2 dataset and put it in the `checkpoint` folder. 
 
 The RGB frames are placed in `./demo/rgb`. The visualization results will be saved in `./demo/results` folder.
 ```
@@ -42,7 +42,7 @@ python demo.py
 ```
 
 # Evaluation
-[Donwload](https://drive.google.com/file/d/1Kg-NOZBfecGHgGyn9pMm7rNibfcg5dMp/view?usp=sharing) the 654 testing sequences of the NYUDV2 dataset and put it in the `./data/testnyu_data/` folder.
+[Download](https://drive.google.com/file/d/1Kg-NOZBfecGHgGyn9pMm7rNibfcg5dMp/view?usp=sharing) the 654 testing sequences of the NYUDV2 dataset and put it in the `./data/testnyu_data/` folder.
 
 Each sequence contains 12 consecutive RGB frames and the ground truth of the 654 testing images for evaluations.
 
