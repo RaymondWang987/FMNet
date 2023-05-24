@@ -25,6 +25,7 @@ import matplotlib.pyplot as plt
 from torch.nn import DataParallel
 import h5py
 import glob
+from pathlib import Path
 torch.backends.cudnn.enabled = True
 torch.backends.cudnn.benchmark = True   
 
@@ -70,13 +71,13 @@ fmnet_Decoder.to(device_fmnet_decoder)
 cnn_decoder.to(device_cnn_decoder)
 
 
-base_dir = './demo/'
-image_dir = base_dir + '/rgb/'
-image_seq = glob.glob(image_dir+'*.png')
-image_seq.sort()
+base_dir = Path('./demo/')
+image_dir = base_dir / 'rgb'
+image_seq = list(image_dir.glob('*.png')) + list(image_dir.glob('*.jpg'))
+image_seq = sorted(image_seq)
 
 for j in range(seq_len):
-    img = img_loader(image_seq[j])
+    img = img_loader(str(image_seq[j]))
     img = (img - mean) / std
     img = np.transpose(img, (2, 0, 1))
     img = torch.Tensor(np.ascontiguousarray(img).astype(np.float32))
