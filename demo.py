@@ -82,6 +82,7 @@ image_seq = sorted(image_seq)
 
 for j in range(seq_len):
     img = img_loader(str(image_seq[j]))
+    img = cv2.resize(img, (640, 480))
     img = (img - mean) / std
     img = np.transpose(img, (2, 0, 1))
     img = torch.Tensor(np.ascontiguousarray(img).astype(np.float32))
