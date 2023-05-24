@@ -316,7 +316,8 @@ class fmnet_encoder(nn.Module):
         enc_in = self.pos_embedding(frames)   # 1 32 192 256 6
         enc_in = enc_in.squeeze(0)
         enc_in = enc_in.permute(3,0,1,2) 
-        choose_frames = np.array([4,8]) #random.sample(range(self.input_length), self.small_length))
+        # choose_frames = np.array([4,8]) #
+        choose_frames = random.sample(range(self.input_length), self.small_length)
         print(choose_frames)
         #random.sample(range(self.input_length), self.small_length))#[3,6,9])#random.sample(range(self.input_length), self.small_length)) #[0,1,2,3,4,5,6,7,8,9,10,11])#random.sample(range(self.input_length), self.small_length))  #[4,8]   
         #print(choose_frames)
@@ -441,7 +442,8 @@ class mae_encoder_infer(nn.Module):
         enc_in = self.pos_embedding(frames)   # 1 32 192 256 6
         enc_in = enc_in.view(self.input_length,self.num_hidden[-1],self.img_height,self.img_width)
 
-        choose_frames1 = np.array([0,2,4,6,8,10,12,14])#random.sample(range(self.input_length), self.small_length))
+        # choose_frames1 = np.array([0,2,4,6,8,10,12,14])
+        choose_frames1 = random.sample(range(self.input_length), self.small_length)
         #print(choose_frames)
         enc_in1 = enc_in[choose_frames1,...]
 
@@ -449,7 +451,8 @@ class mae_encoder_infer(nn.Module):
         #enc_in = enc_in.view(16,1,192,256)
         enc_out1 = self.Encoder(enc_in1)
 
-        choose_frames2 = np.array([1,3,5,7,9,11,13,15])#random.sample(range(self.input_length), self.small_length)) 
+        # choose_frames2 = np.array([1,3,5,7,9,11,13,15])#
+        choose_frames2 = random.sample(range(self.input_length), self.small_length)
         #print(choose_frames)
         enc_in2 = enc_in[choose_frames2,...]
 
