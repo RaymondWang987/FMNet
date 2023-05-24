@@ -111,15 +111,13 @@ _clips = []
 for k in range(outputsall.shape[0]):
     vis = outputsall[k].detach().cpu().numpy().squeeze()
     vis[vis != 0] = 1.0 / vis[vis != 0]
-    
-    _clip = np.clip(vis[:, :, None], 0, 1)
-    _clips.append(ImageClip((_clip * 255).astype('uint8')).set_duration(1.0/24))
 
-    plt.imsave(base_dir / 'results' / f'{k+1:02d}.png',
-               vis,
-               cmap='inferno',
-               vmin=np.min(vis),
-               vmax=np.max(vis))
+    pred = np.clip(vis[:, :, None], 0, 1)
+    pred = (pred * 255).astype('uint8')
+    pred = cv2.applyColorMap(pred, cv2.COLORMAP_INFERNO)
+    _clips.append(ImageClip(cv2.cvtColor(pred, cv2.COLOR_BGR2RGB)).set_duration(1.0/24))
+
+    cv2.imwrite(str(base_dir / 'results' / f'{k+1:02d}.png'), pred)
 
 _concat = concatenate_videoclips(_clips, method="compose")
 _concat.write_videofile('./demo/results/result.mp4', fps=24)
