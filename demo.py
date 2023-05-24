@@ -1,5 +1,7 @@
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '0,1'
+
+# os.environ['CUDA_VISIBLE_DEVICES'] = '0,1'
+
 import argparse
 import cv2
 from os.path import join as pjoin
@@ -42,10 +44,12 @@ std = [0.229, 0.224, 0.225]
 seq_len= 12
 small_seq_len = 2
 
-device_cnn_encoder = torch.device("cuda:0")
-device_fmnet_encoder = torch.device("cuda:0")
-device_fmnet_decoder = torch.device("cuda:1")
-device_cnn_decoder = torch.device("cuda:1")
+devices = [f'cuda:{c}' for c in range(torch.cuda.device_count())]
+
+device_cnn_encoder = torch.device(devices[0])
+device_fmnet_encoder = torch.device(devices[0])
+device_fmnet_decoder = torch.device(devices[-1])
+device_cnn_decoder = torch.device(devices[-1])
 
 
 
