@@ -51,7 +51,7 @@ python testfmnet_nyu.py
 ```
 
 # Future Work
-Our paper "Neural Video Depth Stabilizer" is accepted by ICCV2023. NVDS is the first plug-and-play stabilizer that can remove flickers from any single-image depth model without extra effort. Besides, we also introduce a large-scale dataset, Video Depth in the Wild (VDW), which consists of 14,203 videos with over two million frames, making it the largest natural-scene video depth dataset. If you are interested, refer to our paper and repo:
+Our paper "Neural Video Depth Stabilizer"(NVDS) is accepted by ICCV2023. NVDS is the first plug-and-play stabilizer that can remove flickers from any single-image depth model without extra effort. Besides, we also introduce a large-scale dataset, Video Depth in the Wild (VDW), which consists of 14,203 videos with over two million frames, making it the largest natural-scene video depth dataset. If you are interested, refer to our paper and repo:
 
 Arxiv: https://arxiv.org/abs/2307.08695
 
