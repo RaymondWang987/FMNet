@@ -25,6 +25,11 @@ import matplotlib.pyplot as plt
 from torch.nn import DataParallel
 import h5py
 import glob
+
+from pathlib import Path
+
+from moviepy.editor import ImageClip, concatenate_videoclips
+
 torch.backends.cudnn.enabled = True
 torch.backends.cudnn.benchmark = True   
 
@@ -70,13 +75,14 @@ fmnet_Decoder.to(device_fmnet_decoder)
 cnn_decoder.to(device_cnn_decoder)
 
 
-base_dir = './demo/'
-image_dir = base_dir + '/rgb/'
-image_seq = glob.glob(image_dir+'*.png')
-image_seq.sort()
+base_dir = Path('./demo/')
+image_dir = base_dir / 'rgb'
+image_seq = list(image_dir.glob('*.png')) + list(image_dir.glob('*.jpg'))
+image_seq = sorted(image_seq)
 
 for j in range(seq_len):
-    img = img_loader(image_seq[j])
+    img = img_loader(str(image_seq[j]))
+    img = cv2.resize(img, (640, 480))
     img = (img - mean) / std
     img = np.transpose(img, (2, 0, 1))
     img = torch.Tensor(np.ascontiguousarray(img).astype(np.float32))
@@ -102,9 +108,17 @@ with torch.no_grad():
     outputsall = F.relu(outputsall).squeeze()
         
         
+_clips = []
 for k in range(outputsall.shape[0]):
     vis = outputsall[k].detach().cpu().numpy().squeeze()
-    vis[vis!=0] = 1.0 / vis[vis!=0]
-    plt.imsave('./demo/results/'+str(k+1)+'.png',vis, cmap='inferno',vmin =np.min(vis) , vmax = np.max(vis))
+    vis[vis != 0] = 1.0 / vis[vis != 0]
 
-        
+    pred = np.clip(vis[:, :, None], 0, 1)
+    pred = (pred * 255).astype('uint8')
+    pred = cv2.applyColorMap(pred, cv2.COLORMAP_INFERNO)
+    _clips.append(ImageClip(cv2.cvtColor(pred, cv2.COLOR_BGR2RGB)).set_duration(1.0/24))
+
+    cv2.imwrite(str(base_dir / 'results' / f'{k+1:02d}.png'), pred)
+
+_concat = concatenate_videoclips(_clips, method="compose")
+_concat.write_videofile('./demo/results/result.mp4', fps=24)
